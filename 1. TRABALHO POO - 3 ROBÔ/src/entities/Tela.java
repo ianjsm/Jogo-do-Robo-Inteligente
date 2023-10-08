@@ -26,7 +26,6 @@ public class Tela {
 		System.out.println(ANSI_BLUE + "Azul" + ANSI_RESET);
 		System.out.println(ANSI_PURPLE + "Roxo" + ANSI_RESET);
 		System.out.println(ANSI_GREEN + "Verde" + ANSI_RESET);
-		System.out.println(ANSI_YELLOW + "Amarelo" + ANSI_RESET);
 		System.out.println();
 	}
 }

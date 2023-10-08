@@ -14,21 +14,21 @@ public class PlanoCartesiano {
 				if (i == yRobo1 && j == xRobo1) {
 					if (cor1.equalsIgnoreCase("azul")) {
 						System.out.print(ANSI_BLUE + "R " + ANSI_RESET);
-					} else if (cor1.equalsIgnoreCase("roxo")) {
+					} 
+					else if (cor1.equalsIgnoreCase("roxo")) {
 						System.out.print(ANSI_PURPLE + "R " + ANSI_RESET);
-					} else if (cor1.equalsIgnoreCase("amarelo")) {
-						System.out.print(ANSI_YELLOW + "R " + ANSI_RESET);
-					} else {
+					}
+					else {
 						System.out.print(ANSI_GREEN + "R " + ANSI_RESET);
 					}
 				} else if (i == yRobo2 && j == xRobo2) {
 					if (cor2.equalsIgnoreCase("azul")) {
 						System.out.print(ANSI_BLUE + "R " + ANSI_RESET);
-					} else if (cor2.equalsIgnoreCase("roxo")) {
+					} 
+					else if (cor2.equalsIgnoreCase("roxo")) {
 						System.out.print(ANSI_PURPLE + "R " + ANSI_RESET);
-					} else if (cor2.equalsIgnoreCase("amarelo")) {
-						System.out.print(ANSI_YELLOW + "R " + ANSI_RESET);
-					} else {
+					}
+					else {
 						System.out.print(ANSI_GREEN + "R " + ANSI_RESET);
 					}
 				} else if (i == yAlimento && j == xAlimento) {
