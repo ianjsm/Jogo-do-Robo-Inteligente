@@ -12,7 +12,7 @@ public class Tela {
 		System.out.println("Bem-vindo ao Jogo do Robô!");
 		System.out.println("----------------------------------------" + ANSI_RESET);
 		System.out.println("Descrição do jogo:");
-		System.out.println("Dois robôs se movem randomicamente em um plano cartesiano de tamanho 5x5.");
+		System.out.println("Dois robôs, um normal e um inteligente, se movem randomicamente em um plano cartesiano de tamanho 5x5.");
 		System.out.println("O usuário digita uma posição para o alimento e os dois robôs se movimentam em busca do alimento.");
 		System.out.println(ANSI_YELLOW + "----------------------------------------" + ANSI_RESET);
 		System.out.println("Instruções:");
