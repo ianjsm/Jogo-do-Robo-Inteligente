@@ -11,6 +11,9 @@ import entities.Tela;
 public class Main {
 
 	public static void main(String[] args) {
+		String ANSI_RESET = "\u001B[0m";
+		String ANSI_GREEN = "\u001B[32m";
+		
 		Random random = new Random();
 		Tela tela = new Tela();
 		PlanoCartesiano plano = new PlanoCartesiano();
@@ -44,11 +47,12 @@ public class Main {
 				int movimentoRoboNormal = random.nextInt(4) + 1;
 				roboNormal.informarDirecao(movimentoRoboNormal);
 				roboNormal.moverRobo(movimentoRoboNormal);
+				tela.mostrarTransicao(1000);
 				System.out.println();
 			
 				if (roboNormal.verificarPosicao(roboNormal.getX(), roboNormal.getY(), xAlimento, yAlimento) == true) {
 					plano.imprimirPlanoCartesiano(tamanho, roboNormal.getX(), roboNormal.getY(), roboInteligente.getX(), roboInteligente.getY(), xAlimento, yAlimento, cor1, cor2);
-					System.out.println("Alimento encontrado!");
+					System.out.println(ANSI_GREEN+"Alimento encontrado pelo robô normal!"+ANSI_RESET);
 					System.out.printf(
 						"O robô normal encontrou o alimento em %d movimentos válidos e %d movimentos inválidos",
 						roboNormal.getContadorMovimentosValidosRobo(), roboNormal.getContadorMovimentosInvalidosRobo());
@@ -63,11 +67,12 @@ public class Main {
 					int movimentoRoboInteligente = random.nextInt(4) + 1;
 					roboInteligente.informarDirecao(movimentoRoboInteligente);
 					roboInteligente.moverRobo(movimentoRoboInteligente);
+					tela.mostrarTransicao(1000);
 					System.out.println();
 
 					if (roboInteligente.verificarPosicao(roboInteligente.getX(), roboInteligente.getY(), xAlimento, yAlimento) == true) {
 					plano.imprimirPlanoCartesiano(tamanho, roboNormal.getX(), roboNormal.getY(), roboInteligente.getX(), roboInteligente.getY(), xAlimento, yAlimento, cor1, cor2);
-					System.out.println("Alimento encontrado!");
+					System.out.println(ANSI_GREEN+"Alimento encontrado pelo robô inteligente!"+ANSI_RESET);
 					System.out.printf("O robô inteligente encontrou o alimento em %d movimentos válidos e %d movimentos inválidos", roboInteligente.getContadorMovimentosValidosRobo(), roboInteligente.getContadorMovimentosInvalidosRobo());
 					System.out.println();
 					System.out.println();

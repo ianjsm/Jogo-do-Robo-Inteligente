@@ -6,7 +6,6 @@ public class PlanoCartesiano {
 	String ANSI_RED = "\u001B[31m";
 	String ANSI_PURPLE = "\u001B[35m";
 	String ANSI_GREEN = "\u001B[32m";
-	String ANSI_YELLOW = "\u001B[33m";
 
 	public void imprimirPlanoCartesiano(int tamanho, int xRobo1, int yRobo1, int xRobo2, int yRobo2, int xAlimento, int yAlimento, String cor1, String cor2) {
 		for (int i = tamanho - 1; i >= 0; i--) {
@@ -14,21 +13,17 @@ public class PlanoCartesiano {
 				if (i == yRobo1 && j == xRobo1) {
 					if (cor1.equalsIgnoreCase("azul")) {
 						System.out.print(ANSI_BLUE + "R " + ANSI_RESET);
-					} 
-					else if (cor1.equalsIgnoreCase("roxo")) {
+					} else if (cor1.equalsIgnoreCase("roxo")) {
 						System.out.print(ANSI_PURPLE + "R " + ANSI_RESET);
-					}
-					else {
+					} else {
 						System.out.print(ANSI_GREEN + "R " + ANSI_RESET);
 					}
 				} else if (i == yRobo2 && j == xRobo2) {
 					if (cor2.equalsIgnoreCase("azul")) {
 						System.out.print(ANSI_BLUE + "R " + ANSI_RESET);
-					} 
-					else if (cor2.equalsIgnoreCase("roxo")) {
+					} else if (cor2.equalsIgnoreCase("roxo")) {
 						System.out.print(ANSI_PURPLE + "R " + ANSI_RESET);
-					}
-					else {
+					} else {
 						System.out.print(ANSI_GREEN + "R " + ANSI_RESET);
 					}
 				} else if (i == yAlimento && j == xAlimento) {

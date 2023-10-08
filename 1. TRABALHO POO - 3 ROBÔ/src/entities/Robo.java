@@ -3,6 +3,9 @@ package entities;
 import Exception.MovimentoInvalidoException;
 
 public class Robo {
+	String ANSI_RESET = "\u001B[0m";
+	String ANSI_RED = "\u001B[31m";
+	String ANSI_GREEN = "\u001B[32m";
 	protected int x;
 	protected int y;
 	protected String cor;
@@ -68,7 +71,7 @@ public class Robo {
 			try {
 				if (y == 4) {
 					contadorMovimentosInvalidosRobo++;
-					throw new MovimentoInvalidoException("Movimento inválido: você já está na posição mais alta");
+					throw new MovimentoInvalidoException(ANSI_RED+"Movimento inválido: você já está na posição mais alta"+ANSI_RESET);
 				} else {
 					y++;
 					contadorMovimentosValidosRobo++;
@@ -82,7 +85,7 @@ public class Robo {
 			try {
 				if (y == 0) {
 					contadorMovimentosInvalidosRobo++;
-					throw new MovimentoInvalidoException("Movimento inválido: você já está na posição mais baixa!");
+					throw new MovimentoInvalidoException(ANSI_RED+"Movimento inválido: você já está na posição mais baixa!"+ANSI_RESET);
 				} else {
 					y--;
 					contadorMovimentosValidosRobo++;
@@ -96,7 +99,7 @@ public class Robo {
 			try {
 				if (x == 4) {
 					contadorMovimentosInvalidosRobo++;
-					throw new MovimentoInvalidoException("Movimento inválido: você já está na posição mais à direita!");
+					throw new MovimentoInvalidoException(ANSI_RED+"Movimento inválido: você já está na posição mais à direita!"+ANSI_RESET);
 				} else {
 					x++;
 					contadorMovimentosValidosRobo++;
@@ -110,7 +113,7 @@ public class Robo {
 			try {
 				if (x == 0) {
 					contadorMovimentosInvalidosRobo++;
-					throw new MovimentoInvalidoException("Movimento inválido: você já está na posição mais à esquerda!");
+					throw new MovimentoInvalidoException(ANSI_RED+"Movimento inválido: você já está na posição mais à esquerda!"+ANSI_RESET);
 				} else {
 					x--;
 					contadorMovimentosValidosRobo++;
@@ -121,7 +124,7 @@ public class Robo {
 				System.out.println(erro.getMessage());
 			}
 		} else {
-			System.out.println("Movimento inválido!");
+			System.out.println(ANSI_RED+"Movimento inválido!"+ANSI_RESET);
 		}
 	}
 
@@ -130,7 +133,7 @@ public class Robo {
 			try {
 				if (y == 4) {
 					contadorMovimentosInvalidosRobo++;
-					throw new MovimentoInvalidoException("Movimento inválido: você já está na posição mais alta!");
+					throw new MovimentoInvalidoException(ANSI_RED+"Movimento inválido: você já está na posição mais alta!"+ANSI_RESET);
 				} else {
 					y++;
 					contadorMovimentosValidosRobo++;
@@ -144,7 +147,7 @@ public class Robo {
 			try {
 				if (y == 0) {
 					contadorMovimentosInvalidosRobo++;
-					throw new MovimentoInvalidoException("Movimento inválido: você já está na posição mais baixa!");
+					throw new MovimentoInvalidoException(ANSI_RED+"Movimento inválido: você já está na posição mais baixa!"+ANSI_RESET);
 				} else {
 					y--;
 					contadorMovimentosValidosRobo++;
@@ -158,7 +161,7 @@ public class Robo {
 			try {
 				if (x == 4) {
 					contadorMovimentosInvalidosRobo++;
-					throw new MovimentoInvalidoException("Movimento inválido: você já está na posição mais à direita!");
+					throw new MovimentoInvalidoException(ANSI_RED+"Movimento inválido: você já está na posição mais à direita!"+ANSI_RESET);
 				} else {
 					x++;
 					contadorMovimentosValidosRobo++;
@@ -172,7 +175,7 @@ public class Robo {
 			try {
 				if (x == 0) {
 					contadorMovimentosInvalidosRobo++;
-					throw new MovimentoInvalidoException("Movimento inválido: você já está na posição mais à esquerda!");
+					throw new MovimentoInvalidoException(ANSI_RED+"Movimento inválido: você já está na posição mais à esquerda!"+ANSI_RESET);
 				} else {
 					x--;
 					contadorMovimentosValidosRobo++;
@@ -183,7 +186,7 @@ public class Robo {
 				System.out.println(erro.getMessage());
 			}
 		} else {
-			System.out.println("Movimento inválido!");
+			System.out.println(ANSI_RED+"Movimento inválido!"+ANSI_RESET);
 			contadorMovimentosInvalidosRobo++;
 		}
 	}

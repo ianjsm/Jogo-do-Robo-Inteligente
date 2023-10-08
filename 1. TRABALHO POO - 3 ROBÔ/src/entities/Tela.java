@@ -1,5 +1,7 @@
 package entities;
 
+import java.util.concurrent.TimeUnit;
+
 public class Tela {
 	String ANSI_RESET = "\u001B[0m";
 	String ANSI_BLUE = "\u001B[34m";
@@ -21,11 +23,17 @@ public class Tela {
 		System.out.println("Faça suas apostas e divirta-se!");
 		System.out.println("----------------------------------------" + ANSI_RESET);
 		System.out.println();
-
 		System.out.println("Cores disponíveis para os robôs: ");
 		System.out.println(ANSI_BLUE + "Azul" + ANSI_RESET);
 		System.out.println(ANSI_PURPLE + "Roxo" + ANSI_RESET);
 		System.out.println(ANSI_GREEN + "Verde" + ANSI_RESET);
 		System.out.println();
+	}
+	
+	public void mostrarTransicao(int tempo) {
+	    try {
+	        TimeUnit.MILLISECONDS.sleep(tempo);
+	    } catch (InterruptedException ex) {
+	    }
 	}
 }
