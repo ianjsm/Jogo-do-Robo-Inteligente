@@ -38,7 +38,7 @@ public class Main {
 		System.out.println();
 		System.out.println("Os dois robôs iniciam na posição (0,0)!");
 		plano.imprimirPlanoCartesianoInicial(tamanho, roboNormal.getX(), roboNormal.getY(), roboInteligente.getX(), roboInteligente.getY(), xAlimento, yAlimento, cor1, cor2);
-		tela.mostrarTransicao(3000);
+		tela.mostrarTransicao(2000);
 		
 		while (!(xAlimento == roboNormal.getX() && yAlimento == roboNormal.getY())
 				|| !(xAlimento == roboInteligente.getX() && yAlimento == roboInteligente.getY())) {
@@ -48,11 +48,11 @@ public class Main {
 				int movimentoRoboNormal = random.nextInt(4) + 1;
 				roboNormal.informarDirecao(movimentoRoboNormal);
 				roboNormal.moverRobo(movimentoRoboNormal);
+				plano.imprimirPlanoCartesiano(tamanho, roboNormal.getX(), roboNormal.getY(), roboInteligente.getX(), roboInteligente.getY(), xAlimento, yAlimento, cor1, cor2);
 				tela.mostrarTransicao(1000);
 				System.out.println();
 			
 				if (roboNormal.verificarPosicao(roboNormal.getX(), roboNormal.getY(), xAlimento, yAlimento) == true) {
-					plano.imprimirPlanoCartesiano(tamanho, roboNormal.getX(), roboNormal.getY(), roboInteligente.getX(), roboInteligente.getY(), xAlimento, yAlimento, cor1, cor2);
 					System.out.println(ANSI_GREEN+"Alimento encontrado pelo robô normal!"+ANSI_RESET);
 					System.out.printf(
 						"O robô normal encontrou o alimento em %d movimentos válidos e %d movimentos inválidos",
@@ -68,11 +68,11 @@ public class Main {
 					int movimentoRoboInteligente = random.nextInt(4) + 1;
 					roboInteligente.informarDirecao(movimentoRoboInteligente);
 					roboInteligente.moverRobo(movimentoRoboInteligente);
+					plano.imprimirPlanoCartesiano(tamanho, roboNormal.getX(), roboNormal.getY(), roboInteligente.getX(), roboInteligente.getY(), xAlimento, yAlimento, cor1, cor2);
 					tela.mostrarTransicao(1000);
 					System.out.println();
 
 					if (roboInteligente.verificarPosicao(roboInteligente.getX(), roboInteligente.getY(), xAlimento, yAlimento) == true) {
-					plano.imprimirPlanoCartesiano(tamanho, roboNormal.getX(), roboNormal.getY(), roboInteligente.getX(), roboInteligente.getY(), xAlimento, yAlimento, cor1, cor2);
 					System.out.println(ANSI_GREEN+"Alimento encontrado pelo robô inteligente!"+ANSI_RESET);
 					System.out.printf("O robô inteligente encontrou o alimento em %d movimentos válidos e %d movimentos inválidos", roboInteligente.getContadorMovimentosValidosRobo(), roboInteligente.getContadorMovimentosInvalidosRobo());
 					System.out.println();
