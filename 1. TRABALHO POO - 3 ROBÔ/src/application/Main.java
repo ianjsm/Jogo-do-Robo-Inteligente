@@ -38,7 +38,8 @@ public class Main {
 		System.out.println();
 		System.out.println("Os dois robôs iniciam na posição (0,0)!");
 		plano.imprimirPlanoCartesianoInicial(tamanho, roboNormal.getX(), roboNormal.getY(), roboInteligente.getX(), roboInteligente.getY(), xAlimento, yAlimento, cor1, cor2);
-
+		tela.mostrarTransicao(3000);
+		
 		while (!(xAlimento == roboNormal.getX() && yAlimento == roboNormal.getY())
 				|| !(xAlimento == roboInteligente.getX() && yAlimento == roboInteligente.getY())) {
 
