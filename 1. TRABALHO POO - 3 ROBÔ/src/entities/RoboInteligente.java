@@ -7,11 +7,11 @@ public class RoboInteligente extends Robo {
 	String ANSI_RED = "\u001B[31m";
 	String ANSI_GREEN = "\u001B[32m";
 	
+	protected int controle = 0;
+	
 	public RoboInteligente(int x, int y, String cor) {
 		super(x, y, cor);
 	}
-
-	protected int controle = 0;
 	
 	public int getControle() {
 		return controle;
